@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import {
-  BsBell,
   BsPersonCircle,
   BsGlobe,
   BsPeople,
@@ -13,86 +12,114 @@ function Dashboard() {
   return (
     <div className="dashboard-layout">
 
-      {/* Sidebar */}
+      {/* ================= Sidebar ================= */}
 
       <aside className="sidebar">
 
-        <div className="logo">
-          <h2>Admin Panel</h2>
+        <div className="admin-profile">
+
+          <BsPersonCircle className="admin-icon" />
+
+          <div className="admin-details">
+            <h3>Admin</h3>
+            <p>Administrator</p>
+          </div>
+
         </div>
 
         <ul className="sidebar-menu">
 
           <li>
-            <NavLink to="/website-management" className={({ isActive }) => isActive ? "menu-item active" : "menu-item"}>
+
+            <NavLink
+              to="/website-management"
+              className={({ isActive }) =>
+                isActive ? "menu-item active" : "menu-item"
+              }
+            >
 
               <div className="menu-left">
+
                 <BsGlobe />
+
                 <span>Website Management</span>
+
               </div>
 
               <BsChevronDown />
 
             </NavLink>
+
           </li>
 
           <li>
-            <NavLink to="/users" className={({ isActive }) => isActive ? "menu-item active" : "menu-item"}>
+
+            <NavLink
+              to="/users"
+              className={({ isActive }) =>
+                isActive ? "menu-item active" : "menu-item"
+              }
+            >
 
               <div className="menu-left">
+
                 <BsPeople />
+
                 <span>Users</span>
+
               </div>
 
             </NavLink>
+
           </li>
 
           <li>
+
             <NavLink to="/" className="menu-item">
 
               <div className="menu-left">
+
                 <BsBoxArrowRight />
+
                 <span>Logout</span>
+
               </div>
 
             </NavLink>
+
           </li>
 
         </ul>
 
       </aside>
 
-      {/* Main */}
+      {/* ================= Main Content ================= */}
 
       <div className="main-content">
 
-        {/* Navbar */}
+        {/* ================= Navbar ================= */}
 
         <header className="topbar">
 
-          <div className="nav-links">
+          <div className="dashboard-title">
 
-            <NavLink to="/t1" className={({ isActive }) => isActive ? "nav-active" : ""}>
-              T1
-            </NavLink>
-
-            <NavLink to="/t2" className={({ isActive }) => isActive ? "nav-active" : ""}>
-              T2
-            </NavLink>
-
-            <NavLink to="/t3" className={({ isActive }) => isActive ? "nav-active" : ""}>
-              T3
-            </NavLink>
-
-            <NavLink to="/settings" className={({ isActive }) => isActive ? "nav-active" : ""}>
-              Settings
-            </NavLink>
+            MY DASHBOARD
 
           </div>
 
-          <div className="top-icons">
+          <nav className="nav-links">
 
-            <BsBell />
+            <NavLink to="/t1">T1</NavLink>
+
+            <NavLink to="/t2">T2</NavLink>
+
+            <NavLink to="/t3">T3</NavLink>
+
+            <NavLink to="/settings">Settings</NavLink>
+
+          </nav>
+
+          <div className="profile-icon">
 
             <BsPersonCircle />
 
@@ -100,15 +127,17 @@ function Dashboard() {
 
         </header>
 
-        {/* Content */}
+        {/* ================= Content ================= */}
 
         <main className="dashboard-content">
 
           <div className="welcome-box">
 
-            <h2>Welcome Admin 👋</h2>
+            <h1>Welcome to Sankalp Dashboard</h1>
 
-            <p>Select an option from the sidebar or top navigation.</p>
+            <p>
+              Manage your complete website from the admin panel.
+            </p>
 
           </div>
 
