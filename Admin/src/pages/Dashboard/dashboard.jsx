@@ -1,4 +1,12 @@
-import { BsBell, BsPersonCircle, BsGlobe, BsPeople, BsBoxArrowRight, BsChevronDown } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
+import {
+  BsBell,
+  BsPersonCircle,
+  BsGlobe,
+  BsPeople,
+  BsBoxArrowRight,
+  BsChevronDown,
+} from "react-icons/bs";
 import "./Dashboard.css";
 
 function Dashboard() {
@@ -15,40 +23,46 @@ function Dashboard() {
 
         <ul className="sidebar-menu">
 
-          <li className="active">
-            <div className="menu-item">
+          <li>
+            <NavLink to="/website-management" className={({ isActive }) => isActive ? "menu-item active" : "menu-item"}>
+
               <div className="menu-left">
                 <BsGlobe />
                 <span>Website Management</span>
               </div>
 
               <BsChevronDown />
-            </div>
+
+            </NavLink>
           </li>
 
           <li>
-            <div className="menu-item">
+            <NavLink to="/users" className={({ isActive }) => isActive ? "menu-item active" : "menu-item"}>
+
               <div className="menu-left">
                 <BsPeople />
                 <span>Users</span>
               </div>
-            </div>
+
+            </NavLink>
           </li>
 
           <li>
-            <div className="menu-item">
+            <NavLink to="/" className="menu-item">
+
               <div className="menu-left">
                 <BsBoxArrowRight />
                 <span>Logout</span>
               </div>
-            </div>
+
+            </NavLink>
           </li>
 
         </ul>
 
       </aside>
 
-      {/* Main Content */}
+      {/* Main */}
 
       <div className="main-content">
 
@@ -58,13 +72,21 @@ function Dashboard() {
 
           <div className="nav-links">
 
-            <span>T1</span>
+            <NavLink to="/t1" className={({ isActive }) => isActive ? "nav-active" : ""}>
+              T1
+            </NavLink>
 
-            <span>T2</span>
+            <NavLink to="/t2" className={({ isActive }) => isActive ? "nav-active" : ""}>
+              T2
+            </NavLink>
 
-            <span>T3</span>
+            <NavLink to="/t3" className={({ isActive }) => isActive ? "nav-active" : ""}>
+              T3
+            </NavLink>
 
-            <span>Settings</span>
+            <NavLink to="/settings" className={({ isActive }) => isActive ? "nav-active" : ""}>
+              Settings
+            </NavLink>
 
           </div>
 
@@ -86,9 +108,7 @@ function Dashboard() {
 
             <h2>Welcome Admin 👋</h2>
 
-            <p>
-              Select an option from the left sidebar to manage your website.
-            </p>
+            <p>Select an option from the sidebar or top navigation.</p>
 
           </div>
 
