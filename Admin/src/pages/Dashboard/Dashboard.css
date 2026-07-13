@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+}
+
+/* ================= Dashboard Layout ================= */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ================= Sidebar ================= */
+
+.sidebar {
+  width: 270px;
+  background: #1e3a8a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.logo h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-menu li {
+  margin-bottom: 18px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.active .menu-item {
+  background: #2563eb;
+}
+
+.menu-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-left svg {
+  font-size: 20px;
+}
+
+.menu-left span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ================= Main ================= */
+
+.main-content {
+  flex: 1;
+  margin-left: 270px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= Navbar ================= */
+
+.topbar {
+  height: 75px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.nav-links span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links span:hover {
+  color: #2563eb;
+}
+
+.top-icons {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.top-icons svg {
+  font-size: 24px;
+  color: #374151;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.top-icons svg:hover {
+  color: #2563eb;
+}
+
+/* ================= Content ================= */
+
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  background: #f4f7fc;
+}
+
+.welcome-box {
+  width: 100%;
+  min-height: 250px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+}
+
+.welcome-box h2 {
+  font-size: 30px;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.welcome-box p {
+  color: #6b7280;
+  font-size: 17px;
+}
+
+/* ================= Tablet ================= */
+
+@media (max-width: 992px) {
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .main-content {
+    margin-left: 220px;
+  }
+
+  .nav-links {
+    gap: 35px;
+  }
+
+  .nav-links span {
+    font-size: 16px;
+  }
+
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width: 768px) {
+
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .topbar {
+    flex-direction: column;
+    height: auto;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  .welcome-box {
+    padding: 25px;
+  }
+
+}
+
+/* ================= Small Mobile ================= */
+
+@media (max-width: 480px) {
+
+  .logo h2 {
+    font-size: 24px;
+  }
+
+  .menu-left span {
+    font-size: 15px;
+  }
+
+  .nav-links span {
+    font-size: 15px;
+  }
+
+  .top-icons svg {
+    font-size: 20px;
+  }
+
+  .welcome-box h2 {
+    font-size: 24px;
+  }
+
+  .welcome-box p {
+    font-size: 15px;
+  }
+
+}
