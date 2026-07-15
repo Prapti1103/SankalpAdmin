@@ -1,152 +1,212 @@
-.home-container {
-  padding: 20px;
+/* ================= Container ================= */
+
+.home-container{
+    padding:24px;
+    background:#f5f6fa;
+    min-height:100vh;
 }
 
-.page-heading {
-  margin-bottom: 20px;
+/* ================= Heading ================= */
+
+.page-heading{
+    margin-bottom:24px;
 }
 
-.page-heading h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #2b1464;
-  margin-bottom: 5px;
+.page-heading h2{
+    font-size:28px;
+    font-weight:600;
+    color:#2d2d2d;
+    margin-bottom:4px;
 }
 
-.page-heading p {
-  color: #6b7280;
-  font-size: 15px;
+.page-heading p{
+    font-size:14px;
+    color:#777;
+    margin:0;
 }
 
 /* ================= Cards ================= */
 
-.home-card {
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: .3s;
-  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+.home-card{
+    width:100%;
+    height:170px;
+    border:1px solid #e9e9e9;
+    border-radius:10px;
+    background:#fff;
+    cursor:pointer;
+    transition:.3s ease;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-.home-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0,0,0,.15);
+.home-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,.14);
 }
 
-.home-card .card-body {
-  padding: 22px;
+.home-card .card-body{
+    height:100%;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
 }
 
-.card-icon {
-  width: 60px;
-  height: 60px;
-  margin: auto;
-  border-radius: 15px;
-  background: linear-gradient(135deg,#6d63ff,#4f46e5);
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 28px;
+/* ================= Icon ================= */
+
+.card-icon{
+    width:55px;
+    height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    color:#4b6cb7;
+    margin-bottom:16px;
 }
 
-.home-card h4 {
-  margin-top: 18px;
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #2b1464;
+/* ================= Text ================= */
+
+.home-card h4{
+    margin:0 0 6px;
+    font-size:19px;
+    font-weight:600;
+    color:#222;
+    text-align:center;
 }
 
-.home-card p {
-  font-size: 14px;
-  color: #6b7280;
-  line-height: 1.6;
-  margin-bottom: 0;
+.home-card p{
+    margin:0;
+    font-size:13px;
+    line-height:18px;
+    color:#666;
+    text-align:center;
+}
+
+/* ================= Grid Gap ================= */
+
+.row.g-4{
+    --bs-gutter-x:1.5rem;
+    --bs-gutter-y:1.5rem;
 }
 
 /* ================= Desktop ================= */
 
-@media (min-width:1200px){
+@media(min-width:1200px){
 
 .home-card{
-height:220px;
+    height:170px;
 }
 
 }
 
 /* ================= Laptop ================= */
 
-@media (max-width:1199px){
+@media(max-width:1199px){
+
+.home-container{
+    padding:22px;
+}
 
 .home-card{
-height:215px;
+    height:165px;
+}
+
+.card-icon{
+    font-size:38px;
+}
+
+.home-card h4{
+    font-size:18px;
 }
 
 }
 
 /* ================= Tablet ================= */
 
-@media (max-width:991px){
+@media(max-width:991px){
 
 .home-container{
-padding:18px;
+    padding:18px;
 }
 
 .page-heading h2{
-font-size:26px;
+    font-size:26px;
+}
+
+.page-heading p{
+    font-size:13px;
 }
 
 .home-card{
-height:210px;
+    height:160px;
 }
 
 .home-card .card-body{
-padding:20px;
+    padding:18px;
+}
+
+.card-icon{
+    width:50px;
+    height:50px;
+    font-size:34px;
+    margin-bottom:14px;
+}
+
+.home-card h4{
+    font-size:17px;
+}
+
+.home-card p{
+    font-size:12px;
+    line-height:17px;
 }
 
 }
 
 /* ================= Mobile ================= */
 
-@media (max-width:767px){
+@media(max-width:767px){
 
 .home-container{
-padding:15px;
+    padding:15px;
 }
 
 .page-heading{
-text-align:center;
+    text-align:center;
+    margin-bottom:20px;
 }
 
 .page-heading h2{
-font-size:24px;
+    font-size:24px;
 }
 
 .page-heading p{
-font-size:14px;
+    font-size:13px;
 }
 
 .home-card{
-height:auto;
+    height:155px;
 }
 
 .home-card .card-body{
-padding:20px;
+    padding:16px;
 }
 
 .card-icon{
-width:55px;
-height:55px;
-font-size:24px;
+    width:46px;
+    height:46px;
+    font-size:30px;
+    margin-bottom:12px;
 }
 
 .home-card h4{
-font-size:18px;
+    font-size:16px;
 }
 
 .home-card p{
-font-size:13px;
+    font-size:12px;
+    line-height:16px;
 }
 
 }

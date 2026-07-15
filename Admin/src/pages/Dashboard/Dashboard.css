@@ -1,46 +1,46 @@
-/* =======================
-   Global
-======================= */
+/*========================================
+        GOOGLE FONT
+========================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/*========================================
+        GLOBAL
+========================================*/
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:"Poppins",sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#eef2ff;
+    background:#eef5ff;
 }
-
-/* =======================
-   Layout
-======================= */
 
 .dashboard-layout{
     display:flex;
     min-height:100vh;
 }
 
-/* =======================
-   Main Sidebar
-======================= */
-
+/*========================================
+        MAIN SIDEBAR
+========================================*/
 .sidebar{
-    width:290px;
-    background:linear-gradient(180deg,#2b1464,#472f8f);
-    color:#fff;
     position:fixed;
     top:0;
     left:0;
-    bottom:0;
-    padding:25px 20px;
+    width:280px;
+    height:100vh;
     overflow-y:auto;
+    background:#6495ED;
+    color:#fff;
+    padding:22px 18px;
+    box-shadow:5px 0 20px rgba(0,0,0,.12);
     z-index:1000;
 }
 
 .sidebar::-webkit-scrollbar{
-    width:5px;
+    width:6px;
 }
 
 .sidebar::-webkit-scrollbar-thumb{
@@ -48,46 +48,43 @@ body{
     border-radius:20px;
 }
 
-/* =======================
-   Admin Profile
-======================= */
-
+/*========================================
+        ADMIN PROFILE
+========================================*/
 .admin-profile{
     display:flex;
     align-items:center;
     gap:15px;
-    background:rgba(255,255,255,.10);
-    border-radius:16px;
+    background:rgba(255,255,255,.15);
+    border-radius:18px;
     padding:18px;
-    margin-bottom:40px;
+    margin-bottom:35px;
+    backdrop-filter:blur(10px);
 }
 
 .admin-icon{
     font-size:58px;
-    color:#fff;
 }
 
 .admin-details h3{
     font-size:22px;
     font-weight:600;
-    margin-bottom:3px;
 }
 
 .admin-details p{
     font-size:14px;
-    opacity:.75;
+    opacity:.9;
 }
 
-/* =======================
-   Sidebar Menu
-======================= */
-
+/*========================================
+        SIDEBAR MENU
+========================================*/
 .sidebar-menu{
     list-style:none;
 }
 
 .sidebar-menu li{
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
 .menu-item{
@@ -95,64 +92,72 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:16px 18px;
+    text-decoration:none;
     border:none;
     background:transparent;
     color:#fff;
-    text-decoration:none;
+    padding:15px 18px;
     border-radius:14px;
     cursor:pointer;
     transition:.3s;
 }
 
+.menu-button{
+    outline:none;
+}
+
 .menu-left{
     display:flex;
     align-items:center;
-    gap:16px;
-    flex:1;
+    gap:15px;
 }
 
 .menu-left svg{
-    font-size:21px;
+    font-size:20px;
 }
 
 .menu-left span{
-    font-size:16px;
+    font-size:15px;
     font-weight:500;
 }
 
 .menu-item:hover{
-    background:rgba(255,255,255,.15);
+    background:rgba(255,255,255,.18);
     transform:translateX(5px);
 }
 
 .menu-item.active{
-    background:#6d63ff;
-    box-shadow:0 10px 20px rgba(109,99,255,.35);
+    background:#fff;
+    color:#6495ED;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
-/* =======================
-   Website Sub Sidebar
-======================= */
+.menu-item.active svg{
+    color:#6495ED;
+}
 
+/*========================================
+        SUB SIDEBAR
+========================================*/
 .sub-sidebar{
-    width:240px;
     position:fixed;
     top:0;
-    left:290px;
-    bottom:0;
-    background:#ffffff;
+    left:280px;
+    width:240px;
+    height:100vh;
+    background:#fff;
     border-right:1px solid #e5e7eb;
-    padding:30px 20px;
-    box-shadow:8px 0 20px rgba(0,0,0,.05);
+    padding:28px 18px;
+    box-shadow:5px 0 18px rgba(0,0,0,.05);
     animation:slideSidebar .3s ease;
     z-index:999;
 }
 
 .sub-sidebar h3{
-    color:#2b1464;
-    margin-bottom:25px;
+    color:#6495ED;
     font-size:22px;
+    margin-bottom:25px;
 }
 
 .sub-sidebar a{
@@ -160,112 +165,32 @@ body{
     align-items:center;
     gap:12px;
     text-decoration:none;
-    color:#555;
+    color:#4b5563;
     padding:14px;
     margin-bottom:10px;
-    border-radius:10px;
+    border-radius:12px;
     transition:.3s;
     font-weight:500;
 }
 
+.sub-sidebar a svg{
+    font-size:18px;
+}
+
 .sub-sidebar a:hover{
-    background:#6d63ff;
-    color:#fff;
+    background:#edf4ff;
+    color:#6495ED;
+    transform:translateX(5px);
 }
 
 .sub-sidebar a.active{
-    background:#6d63ff;
+    background:#6495ED;
     color:#fff;
 }
 
-/* =======================
-   Main Content
-======================= */
-
-.main-content{
-    flex:1;
-    margin-left:290px;
-    transition:.35s;
-}
-
-.main-content.expanded{
-    margin-left:530px;
-}
-
-/* =======================
-   Navbar
-======================= */
-
-.topbar{
-    height:80px;
-    background:#fff;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 35px;
-    box-shadow:0 4px 20px rgba(0,0,0,.08);
-}
-
-.dashboard-title{
-    flex:1;
-    font-size:28px;
-    font-weight:700;
-    color:#2b1464;
-}
-
-.nav-links{
-    flex:2;
-    display:flex;
-    justify-content:space-evenly;
-    align-items:center;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#555;
-    font-size:18px;
-    font-weight:600;
-    transition:.3s;
-    position:relative;
-}
-
-.nav-links a:hover,
-.nav-links a.active{
-    color:#6d63ff;
-}
-
-.nav-links a.active::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-10px;
-    width:100%;
-    height:3px;
-    background:#6d63ff;
-    border-radius:20px;
-}
-
-.profile-icon{
-    flex:1;
-    display:flex;
-    justify-content:flex-end;
-}
-
-.profile-icon svg{
-    font-size:40px;
-    color:#6d63ff;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.profile-icon svg:hover{
-    transform:scale(1.08);
-}
-
-/* =======================
-   Animation
-======================= */
-
+/*========================================
+        ANIMATION
+========================================*/
 @keyframes slideSidebar{
 
     from{
@@ -279,216 +204,470 @@ body{
     }
 
 }
-
-/* =======================
-   Dashboard Content
-======================= */
-
-.dashboard-content{
-    padding:35px;
-    background:#eef2ff;
-    min-height:calc(100vh - 80px);
-    transition:.35s;
+/*========================================
+        MAIN CONTENT
+========================================*/
+.main-content{
+    flex:1;
+    margin-left:280px;
+    transition:.35s ease;
+    background:#eef5ff;
 }
 
-.welcome-box{
-    width:100%;
-    min-height:calc(100vh - 150px);
+.main-content.expanded{
+    margin-left:520px;
+}
+
+/*========================================
+        TOPBAR
+========================================*/
+.topbar{
+    height:75px;
     background:#ffffff;
-    border-radius:22px;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
     display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    border-bottom:1px solid #e5e7eb;
+    box-shadow:0 3px 12px rgba(0,0,0,.06);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.dashboard-title{
+    font-size:28px;
+    font-weight:700;
+    color:#6495ED;
+    letter-spacing:.5px;
+}
+
+/*========================================
+        NAVIGATION
+========================================*/
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#4b5563;
+    font-size:15px;
+    font-weight:500;
+    transition:.3s;
+    position:relative;
+}
+
+.nav-links a:hover{
+    color:#6495ED;
+}
+
+.nav-links a.active{
+    color:#6495ED;
+}
+
+.nav-links a.active::after{
+    content:"";
+    position:absolute;
+    bottom:-8px;
+    left:0;
+    width:100%;
+    height:3px;
+    background:#6495ED;
+    border-radius:20px;
+}
+
+/*========================================
+        PROFILE ICON
+========================================*/
+.profile-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.profile-icon svg{
+    font-size:42px;
+    color:#6495ED;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.profile-icon svg:hover{
+    transform:scale(1.08);
+}
+
+/*========================================
+        DASHBOARD CONTENT
+========================================*/
+.dashboard-content{
+    padding:30px;
+    min-height:calc(100vh - 75px);
+    background:#eef5ff;
+}
+
+/*========================================
+        WELCOME CARD
+========================================*/
+.welcome-box{
+    background:#fff;
+    border-radius:20px;
+    min-height:calc(100vh - 145px);
+    display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
-    transition:.35s;
+    text-align:center;
     padding:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
 .welcome-box:hover{
-    transform:translateY(-4px);
+    transform:translateY(-5px);
 }
 
 .welcome-box h1{
     font-size:42px;
-    color:#2b1464;
-    font-weight:700;
+    color:#6495ED;
     margin-bottom:15px;
-    text-align:center;
+    font-weight:700;
 }
 
 .welcome-box p{
-    font-size:20px;
+    font-size:18px;
     color:#6b7280;
-    text-align:center;
     max-width:700px;
+    line-height:1.8;
 }
 
-/* =======================
-   Tablet
-======================= */
-
-@media(max-width:992px){
-
-.sidebar{
-    width:240px;
-}
-
-.sub-sidebar{
-    width:220px;
-    left:240px;
-}
-
-.main-content{
-    margin-left:240px;
-}
-
-.main-content.expanded{
-    margin-left:460px;
-}
-
-.dashboard-title{
-    font-size:22px;
-}
-
-.nav-links{
-    gap:25px;
-}
-
-.nav-links a{
-    font-size:16px;
-}
-
-.welcome-box h1{
-    font-size:34px;
-}
-
-.welcome-box p{
-    font-size:17px;
-}
-
-}
-
-/* =======================
-   Mobile
-======================= */
-
-@media(max-width:768px){
-
-.dashboard-layout{
-    flex-direction:column;
-}
-
-.sidebar{
-    width:100%;
-    position:relative;
-    height:auto;
-}
-
-.sub-sidebar{
-    position:relative;
-    width:100%;
-    left:0;
-    top:0;
-    box-shadow:none;
-    border-right:none;
-    border-top:1px solid #e5e7eb;
-}
-
-.main-content,
-.main-content.expanded{
-    margin-left:0;
-}
-
-.topbar{
-    flex-direction:column;
-    height:auto;
-    gap:18px;
-    padding:20px;
-}
-
-.dashboard-title{
-    width:100%;
-    text-align:center;
-}
-
-.nav-links{
-    width:100%;
-    justify-content:space-evenly;
-    flex-wrap:wrap;
-    gap:18px;
-}
-
-.profile-icon{
-    width:100%;
-    justify-content:center;
-}
-
-.dashboard-content{
-    padding:20px;
-}
-
-.welcome-box{
-    min-height:350px;
-    padding:30px 20px;
-}
-
-.welcome-box h1{
-    font-size:28px;
-}
-
-.welcome-box p{
-    font-size:16px;
-}
-
-}
-
-/* =======================
-   Small Mobile
-======================= */
-
-@media(max-width:480px){
-
-.admin-profile{
-    flex-direction:column;
-    text-align:center;
-}
-
-.admin-icon{
-    font-size:55px;
-}
-
-.admin-details h3{
-    font-size:20px;
-}
-
-.dashboard-title{
-    font-size:20px;
-}
-
-.nav-links{
-    gap:12px;
-}
-
-.nav-links a{
-    font-size:15px;
-}
-
-.profile-icon svg{
-    font-size:34px;
-}
-
-.welcome-box{
+/*========================================
+        COMMON CARD
+========================================*/
+.card{
+    background:#fff;
     border-radius:16px;
-    min-height:280px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+    transition:.3s;
 }
 
-.welcome-box h1{
-    font-size:24px;
+.card:hover{
+    transform:translateY(-5px);
 }
 
-.welcome-box p{
+/*========================================
+        BUTTON
+========================================*/
+.btn-primary{
+    background:#6495ED;
+    color:#fff;
+    border:none;
+    padding:12px 24px;
+    border-radius:10px;
+    cursor:pointer;
     font-size:15px;
+    font-weight:500;
+    transition:.3s;
 }
 
+.btn-primary:hover{
+    background:#4d82e6;
+}
+/*========================================
+        TABLET
+========================================*/
+@media (max-width:992px){
+
+    .sidebar{
+        width:240px;
+    }
+
+    .sub-sidebar{
+        width:220px;
+        left:240px;
+    }
+
+    .main-content{
+        margin-left:240px;
+    }
+
+    .main-content.expanded{
+        margin-left:460px;
+    }
+
+    .topbar{
+        padding:0 20px;
+    }
+
+    .dashboard-title{
+        font-size:24px;
+    }
+
+    .nav-links{
+        gap:18px;
+    }
+
+    .nav-links a{
+        font-size:14px;
+    }
+
+    .dashboard-content{
+        padding:25px;
+    }
+
+    .welcome-box{
+        padding:30px;
+    }
+
+    .welcome-box h1{
+        font-size:34px;
+    }
+
+    .welcome-box p{
+        font-size:16px;
+    }
+
+}
+
+
+/*========================================
+        MOBILE
+========================================*/
+@media (max-width:768px){
+
+    .dashboard-layout{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        border-radius:0;
+    }
+
+    .sub-sidebar{
+        position:relative;
+        width:100%;
+        left:0;
+        top:0;
+        height:auto;
+        border-right:none;
+        border-top:1px solid #e5e7eb;
+        box-shadow:none;
+    }
+
+    .main-content,
+    .main-content.expanded{
+        margin-left:0;
+    }
+
+    .topbar{
+        height:auto;
+        padding:18px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .dashboard-title{
+        text-align:center;
+        font-size:22px;
+    }
+
+    .nav-links{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .profile-icon{
+        justify-content:center;
+    }
+
+    .dashboard-content{
+        padding:18px;
+    }
+
+    .welcome-box{
+        min-height:320px;
+        padding:25px;
+    }
+
+    .welcome-box h1{
+        font-size:28px;
+    }
+
+    .welcome-box p{
+        font-size:15px;
+    }
+
+}
+
+
+/*========================================
+        SMALL MOBILE
+========================================*/
+@media (max-width:480px){
+
+    .admin-profile{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .admin-icon{
+        font-size:48px;
+    }
+
+    .admin-details h3{
+        font-size:20px;
+    }
+
+    .dashboard-title{
+        font-size:20px;
+    }
+
+    .nav-links{
+        gap:10px;
+    }
+
+    .nav-links a{
+        font-size:13px;
+    }
+
+    .profile-icon svg{
+        font-size:34px;
+    }
+
+    .dashboard-content{
+        padding:15px;
+    }
+
+    .welcome-box{
+        min-height:280px;
+        border-radius:15px;
+        padding:20px;
+    }
+
+    .welcome-box h1{
+        font-size:24px;
+    }
+
+    .welcome-box p{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+}
+
+
+/*========================================
+        SMOOTH TRANSITIONS
+========================================*/
+.sidebar,
+.sub-sidebar,
+.topbar,
+.menu-item,
+.nav-links a,
+.profile-icon svg,
+.welcome-box,
+.card,
+.btn-primary{
+    transition:all .3s ease;
+}
+
+/*========================================
+        CUSTOM SCROLLBAR
+========================================*/
+::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#eef5ff;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#6495ED;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#4d82e6;
+}
+
+/*========================================
+        SELECTION
+========================================*/
+::selection{
+    background:#6495ED;
+    color:#fff;
+}
+
+/*========================================
+        REMOVE LINK OUTLINE
+========================================*/
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+
+button{
+    outline:none;
+}
+
+button:focus,
+a:focus{
+    outline:none;
+}
+
+/*========================================
+        SMOOTH SCROLL
+========================================*/
+html{
+    scroll-behavior:smooth;
+}
+
+/*========================================
+        IMAGE
+========================================*/
+img{
+    max-width:100%;
+    display:block;
+}
+
+/*========================================
+        ICON ALIGNMENT
+========================================*/
+svg{
+    vertical-align:middle;
+}
+
+/*========================================
+        HOVER EFFECT
+========================================*/
+.menu-item,
+.sub-sidebar a,
+.nav-links a,
+.card,
+.welcome-box{
+    transition:all .3s ease-in-out;
+}
+
+/*========================================
+        SHADOW UTILITIES
+========================================*/
+.shadow-sm{
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.shadow-md{
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.shadow-lg{
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
 }

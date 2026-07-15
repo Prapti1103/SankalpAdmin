@@ -1,0 +1,165 @@
+.hero-section-page {
+  padding: 25px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.hero-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-card .card-body {
+  padding: 30px;
+}
+
+/* Header */
+
+.page-title {
+  margin-bottom: 25px;
+}
+
+.page-title h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.page-title p {
+  color: #64748b;
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Labels */
+
+.form-label {
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+
+.form-control,
+.form-select {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #dbe2ea;
+  font-size: 15px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+  border-color: #0d6efd;
+}
+
+/* Textarea */
+
+textarea.form-control {
+  height: 120px !important;
+  resize: none;
+}
+
+/* Image Preview */
+
+.image-preview {
+  width: 100%;
+  height: 220px;
+  border: 2px dashed #dbe2ea;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-preview span {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* Buttons */
+
+.hero-btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.hero-btn-group .btn {
+  min-width: 150px;
+  height: 45px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+
+  .hero-card .card-body {
+    padding: 20px;
+  }
+
+  .image-preview {
+    height: 180px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero-section-page {
+    padding: 15px;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  .hero-btn-group {
+    flex-direction: column;
+  }
+
+  .hero-btn-group .btn {
+    width: 100%;
+  }
+
+  .image-preview {
+    height: 160px;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .page-title h2 {
+    font-size: 22px;
+  }
+
+  .page-title p {
+    font-size: 14px;
+  }
+
+  .form-control,
+  .form-select {
+    height: 44px;
+  }
+
+  textarea.form-control {
+    height: 100px !important;
+  }
+
+}
