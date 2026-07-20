@@ -1,7 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// Authentication
 import Login from "./pages/Login/Login";
+
+// Dashboard
 import Dashboard from "./pages/Dashboard/Dashboard";
+
+// Settings
 import Settings from "./pages/Settings/Settings";
 
 // Home
@@ -9,48 +14,64 @@ import Home from "./pages/WebsiteManagement/Home/Home";
 
 // Home Sections
 import HeroSection from "./pages/WebsiteManagement/Home/HeroSeaction/HeroSection";
-// import Services from "./pages/WebsiteManagement/Home/Services/Services";
-// import Guide from "./pages/WebsiteManagement/Home/Guide/Guide";
-import About from "./pages/WebsiteManagement/Home/AboutSeaction/AboutSeaction";
+import Guide from "./pages/WebsiteManagement/Home/Guide/Guide";
 import AboutSection from "./pages/WebsiteManagement/Home/AboutSeaction/AboutSeaction";
-// import Features from "./pages/WebsiteManagement/Home/Features/Features";
+import Features from "./pages/WebsiteManagement/Home/Features/Features";
 import Footer from "./pages/WebsiteManagement/Home/Footer/Footer";
+import Faculty from "./pages/WebsiteManagement/Faculty/Faculty";
+import Testimonial from "./pages/WebsiteManagement/Testimonial/Testimonial";
+import Topper from "./pages/WebsiteManagement/Topper/Topper";
+import Award from "./pages/WebsiteManagement/Award/Award";
+import Student from "./pages/StudentRegistration/Student";
+
+// Website Pages
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
 
-        {/* Login */}
+        {/* ================= Login ================= */}
         <Route path="/" element={<Login />} />
 
-        {/* Dashboard */}
+
+
+        {/* ================= Dashboard ================= */}
         <Route path="/dashboard" element={<Dashboard />} />
 
-        {/* Website Management */}
+
+
+        {/* ================= Website Management ================= */}
         <Route path="/website-management" element={<Dashboard />}>
 
-          {/* Home */}
+          {/* ---------- Home ---------- */}
           <Route path="home" element={<Home />}>
 
-            {/* Hero */}
             <Route path="hero" element={<HeroSection />} />
-
-            {/* Future */}
 
             {/* <Route path="services" element={<Services />} /> */}
 
-            {/* <Route path="guide" element={<Guide />} /> */}
+            <Route path="guide" element={<Guide />} />
 
-            <Route path="about" element={<AboutSection/>} />
+            <Route path="about" element={<AboutSection />} />
 
-            {/* <Route path="features-contact" element={<Features />} /> */}
+            <Route path="features-contact" element={<Features />} />
 
             <Route path="footer" element={<Footer />} />
 
           </Route>
 
-          {/* Website Pages */}
+
+
+          {/* ---------- Website Pages ---------- */}
+
+          <Route path="faculty" element={<Faculty/>} />
+
+          <Route path="testimonial" element={<Testimonial/>} />
+
+          <Route path="award" element={<Award/>} />
+
+          <Route path="topper" element={<Topper/>} />
 
           <Route path="answer-key" element={<div>Answer Key</div>} />
 
@@ -64,12 +85,32 @@ function App() {
 
         </Route>
 
-        {/* Users */}
+
+
+        {/* ================= Users ================= */}
         <Route path="/users" element={<Dashboard />} />
 
-        {/* Settings */}
+        {/* ============== Student ================ */}
+          <Route path="/students" element={<Dashboard />} />
+
+        {/* ===================== Coordinator=============== */}
+          <Route path="/coordinator" element={<Dashboard />} />
+
+          {/* ===============Contact ================ */}
+          <Route path="/contact" element={<Dashboard />} />
+
+          {/* ============= School =========== */}
+          <Route path="/school" element={<Dashboard />} />
+
+
+
+
+        {/* ================= Settings ================= */}
         <Route path="/settings" element={<Settings />} />
 
+
+
+        {/* ================= Test Routes ================= */}
         <Route path="/t1" element={<Dashboard />} />
         <Route path="/t2" element={<Dashboard />} />
         <Route path="/t3" element={<Dashboard />} />

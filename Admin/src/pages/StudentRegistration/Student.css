@@ -1,0 +1,426 @@
+/* ====================================
+   Student Page
+==================================== */
+
+.student-page{
+    min-height:100vh;
+    background:#f5f7fb;
+    padding:25px;
+}
+
+/* ====================================
+   Toolbar
+==================================== */
+
+.student-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.create-btn{
+    background:#0d6efd !important;
+    border:none !important;
+    padding:10px 18px !important;
+    border-radius:8px !important;
+    font-weight:600 !important;
+}
+
+.create-btn:hover{
+    background:#0b5ed7 !important;
+}
+
+/* ====================================
+   Card
+==================================== */
+
+.student-card{
+    border:none !important;
+    border-radius:12px !important;
+    overflow:hidden;
+}
+
+.student-header{
+    background:#5d8ce6 !important;
+    color:#fff !important;
+    font-size:20px;
+    font-weight:600;
+    padding:18px 25px;
+}
+
+.student-card .card-body{
+    padding:30px;
+}
+
+/* ====================================
+   Form
+==================================== */
+
+.form-label{
+    font-weight:600;
+    color:#222;
+}
+
+.form-label small{
+    font-weight:400;
+    color:#777 !important;
+}
+
+.form-control,
+.form-select{
+    border-radius:8px !important;
+    min-height:45px;
+    box-shadow:none !important;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#0d6efd !important;
+    box-shadow:0 0 0 .2rem rgba(13,110,253,.15) !important;
+}
+
+textarea.form-control{
+    min-height:110px;
+    resize:none;
+}
+
+/* ====================================
+   Buttons
+==================================== */
+
+.save-btn{
+    background:#0d6efd !important;
+    border:none !important;
+    padding:10px 25px !important;
+    border-radius:8px !important;
+    font-weight:600 !important;
+}
+
+.save-btn:hover{
+    background:#0b5ed7 !important;
+}
+
+/* ====================================
+   Student Table
+==================================== */
+
+.student-table{
+    width:100%;
+    background:#ffffff;
+    border-radius:14px;
+    overflow-x:auto;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.student-table-ui{
+    width:100%;
+    min-width:1400px;
+    border-collapse:collapse;
+}
+
+/* ====================================
+   Table Header
+==================================== */
+
+.student-table-ui thead{
+    background:#5d8ce6;
+}
+
+.student-table-ui thead tr{
+    height:60px;
+}
+
+.student-table-ui th{
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    text-align:center;
+    padding:18px;
+    border:none;
+    position:relative;
+    white-space:nowrap;
+}
+
+.student-table-ui th:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:2px;
+    height:24px;
+    background:rgba(255,255,255,.7);
+}
+
+/* ====================================
+   Table Body
+==================================== */
+
+.student-table-ui tbody tr{
+    transition:.3s;
+}
+
+.student-table-ui tbody tr:nth-child(odd){
+    background:#ffffff;
+}
+
+.student-table-ui tbody tr:nth-child(even){
+    background:#f7f8fb;
+}
+
+.student-table-ui tbody tr:hover{
+    background:#edf4ff;
+}
+
+.student-table-ui td{
+    padding:16px;
+    text-align:center;
+    vertical-align:middle;
+    border-top:1px solid #ececec;
+    color:#333;
+    font-size:14px;
+    white-space:nowrap;
+}
+
+/* ====================================
+   Empty Data
+==================================== */
+
+.empty-data{
+    text-align:center;
+    padding:35px !important;
+    color:#888;
+    font-size:15px;
+    font-weight:500;
+}
+
+/* ====================================
+   Action Buttons
+==================================== */
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.edit-btn,
+.delete-btn{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+    font-size:16px;
+}
+
+.edit-btn{
+    background:#e9f2ff;
+    color:#0d6efd;
+}
+
+.edit-btn:hover{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.delete-btn{
+    background:#ffe8e8;
+    color:#dc3545;
+}
+
+.delete-btn:hover{
+    background:#dc3545;
+    color:#fff;
+}
+
+/* ====================================
+   Rounded Header
+==================================== */
+
+.student-table-ui thead tr th:first-child{
+    border-top-left-radius:14px;
+}
+
+.student-table-ui thead tr th:last-child{
+    border-top-right-radius:14px;
+}
+
+/* ====================================
+   Responsive Design
+==================================== */
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+    .student-page{
+        padding:20px;
+    }
+
+    .student-card .card-body{
+        padding:25px;
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    .student-toolbar{
+        flex-direction:column;
+        align-items:stretch;
+        gap:15px;
+    }
+
+    .create-btn{
+        width:100%;
+    }
+
+    .student-card .card-body{
+        padding:20px;
+    }
+
+    .student-table{
+        overflow-x:auto;
+    }
+
+    .student-table-ui{
+        min-width:1300px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .student-page{
+        padding:15px;
+    }
+
+    .student-header{
+        font-size:20px;
+        text-align:center;
+        padding:15px;
+    }
+
+    .student-card .card-body{
+        padding:18px;
+    }
+
+    .form-control,
+    .form-select{
+        min-height:42px;
+        font-size:14px;
+    }
+
+    textarea.form-control{
+        min-height:90px;
+    }
+
+    .save-btn{
+        width:100%;
+        margin-bottom:10px;
+    }
+
+    .student-table-ui{
+        min-width:1200px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:576px){
+
+    .student-page{
+        padding:10px;
+    }
+
+    .student-header{
+        font-size:18px;
+    }
+
+    .form-label{
+        font-size:14px;
+    }
+
+    .form-label small{
+        font-size:11px;
+    }
+
+    .form-control,
+    .form-select{
+        font-size:13px;
+        padding:10px;
+    }
+
+    .save-btn{
+        width:100%;
+        font-size:15px;
+    }
+
+    .create-btn{
+        width:100%;
+        font-size:14px;
+    }
+
+    .student-table-ui th,
+    .student-table-ui td{
+        font-size:13px;
+        padding:14px;
+    }
+
+    .edit-btn,
+    .delete-btn{
+        width:34px;
+        height:34px;
+        font-size:14px;
+    }
+
+}
+
+/* ====================================
+   Scrollbar
+==================================== */
+
+.student-table::-webkit-scrollbar{
+    height:8px;
+}
+
+.student-table::-webkit-scrollbar-track{
+    background:#f1f1f1;
+    border-radius:20px;
+}
+
+.student-table::-webkit-scrollbar-thumb{
+    background:#b5b5b5;
+    border-radius:20px;
+}
+
+.student-table::-webkit-scrollbar-thumb:hover{
+    background:#8a8a8a;
+}
+
+/* ====================================
+   Smooth Animation
+==================================== */
+
+.student-card,
+.student-table,
+.create-btn,
+.save-btn{
+    transition:.3s ease;
+}
+
+.student-card:hover{
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}

@@ -297,7 +297,7 @@ function Footer() {
                 </Form.Group>
               </Col>
 
-              <Col md={6}>
+              {/* <Col md={6}>
                 <Form.Group>
                   <Form.Label>Status</Form.Label>
                   <Form.Select name="contactStatus" value={footerData.contactStatus} onChange={handleChange}>
@@ -305,7 +305,7 @@ function Footer() {
                     <option>Inactive</option>
                   </Form.Select>
                 </Form.Group>
-              </Col>
+              </Col> */}
             </Row>
 
             <div className="footer-btn-group">

@@ -1,0 +1,275 @@
+.guide-page {
+  padding: 25px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.guide-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.guide-card .card-body {
+  padding: 35px;
+}
+
+/* ==========================
+   Page Title
+========================== */
+
+.page-title{
+  margin-bottom:30px;
+}
+
+.page-title h2{
+  font-size:30px;
+  font-weight:700;
+  color:#1f2937;
+  margin-bottom:8px;
+}
+
+.page-title p{
+  color:#6b7280;
+  margin:0;
+}
+
+/* ==========================
+   Section Title
+========================== */
+
+.section-title{
+  font-size:22px;
+  font-weight:700;
+  color:#2563eb;
+  margin:35px 0 20px;
+  border-left:5px solid #2563eb;
+  padding-left:12px;
+}
+
+/* ==========================
+   Labels
+========================== */
+
+.form-label{
+  font-weight:600;
+  color:#374151;
+  margin-bottom:8px;
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+.form-control,
+.form-select{
+  border-radius:10px;
+  border:1px solid #d1d5db;
+  padding:12px;
+  transition:.3s;
+}
+
+.form-control:focus,
+.form-select:focus{
+  border-color:#2563eb;
+  box-shadow:0 0 0 .2rem rgba(37,99,235,.15);
+}
+
+/* ==========================
+   Textarea
+========================== */
+
+textarea.form-control{
+  resize:vertical;
+  min-height:120px;
+}
+
+/* ==========================
+   Upload Cards
+========================== */
+
+.upload-card{
+  border:none;
+  border-radius:12px;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.inner-card{
+  border:none;
+  border-radius:12px;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+/* ==========================
+   Image Preview
+========================== */
+
+.preview-box{
+  width:100%;
+  height:180px;
+  border:2px dashed #cbd5e1;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  background:#fafafa;
+}
+
+.preview-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.preview-box span{
+  color:#94a3b8;
+  font-size:14px;
+}
+
+/* ==========================
+   PDF Preview
+========================== */
+
+.pdf-box{
+  width:100%;
+  height:70px;
+  border:2px dashed #cbd5e1;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fafafa;
+}
+
+.pdf-box p{
+  margin:0;
+  color:#16a34a;
+  font-weight:600;
+}
+
+.pdf-box span{
+  color:#94a3b8;
+}
+
+/* ==========================
+   Table
+========================== */
+
+.table{
+  background:#fff;
+}
+
+.table thead{
+  background:#2563eb;
+  color:#fff;
+}
+
+.table th,
+.table td{
+  vertical-align:middle;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.guide-btn-group{
+  display:flex;
+  justify-content:flex-end;
+  gap:15px;
+  margin-top:35px;
+}
+
+.guide-btn-group .btn{
+  min-width:170px;
+  height:46px;
+  border-radius:10px;
+  font-weight:600;
+}
+
+/* ==========================
+   HR
+========================== */
+
+hr{
+  margin:40px 0;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.guide-card .card-body{
+padding:25px;
+}
+
+.page-title h2{
+font-size:26px;
+}
+
+.section-title{
+font-size:20px;
+}
+
+}
+
+@media(max-width:768px){
+
+.guide-page{
+padding:15px;
+}
+
+.guide-card .card-body{
+padding:20px;
+}
+
+.page-title{
+text-align:center;
+}
+
+.page-title h2{
+font-size:23px;
+}
+
+.guide-btn-group{
+flex-direction:column;
+}
+
+.guide-btn-group .btn{
+width:100%;
+}
+
+.preview-box{
+height:160px;
+}
+
+}
+
+@media(max-width:576px){
+
+.page-title h2{
+font-size:20px;
+}
+
+.page-title p{
+font-size:14px;
+}
+
+.section-title{
+font-size:18px;
+}
+
+.form-control,
+.form-select{
+font-size:14px;
+padding:10px;
+}
+
+.preview-box{
+height:140px;
+}
+
+}

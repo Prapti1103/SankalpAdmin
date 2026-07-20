@@ -1,0 +1,327 @@
+/* ==========================
+   School Page
+========================== */
+
+.school-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ==========================
+   Toolbar
+========================== */
+
+.school-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.create-btn {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+}
+
+.create-btn:hover {
+  background: linear-gradient(135deg, #4338ca, #1d4ed8);
+}
+
+/* ==========================
+   Search
+========================== */
+
+.search-box {
+  position: relative;
+  width: 320px;
+  max-width: 100%;
+}
+
+.search-box input {
+  padding-left: 40px;
+  border-radius: 10px;
+  height: 45px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  z-index: 10;
+}
+
+/* ==========================
+   Card
+========================== */
+
+.school-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.school-header {
+  background: linear-gradient(90deg, #6d63ff, #4b7bec);
+  color: #fff;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ==========================
+   Form
+========================== */
+
+.school-card .form-label {
+  font-weight: 600;
+  color: #444;
+}
+
+.school-card .form-control {
+  border-radius: 10px;
+  min-height: 45px;
+}
+
+.school-card textarea.form-control {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-weight: 600;
+}
+
+.save-btn:hover {
+  background: linear-gradient(135deg, #4338ca, #1d4ed8);
+}
+
+/* ==========================
+   Table
+========================== */
+
+.school-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.school-table-ui {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.school-table-ui thead {
+  background: #eef2ff;
+}
+
+.school-table-ui th {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.school-table-ui td {
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #ececec;
+  vertical-align: middle;
+}
+
+.school-table-ui tbody tr:hover {
+  background: #f8f9ff;
+}
+
+/* ==========================
+   Action Buttons
+========================== */
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background: #0d6efd;
+}
+
+.edit-btn:hover {
+  background: #0b5ed7;
+}
+
+.delete-btn {
+  background: #dc3545;
+}
+
+.delete-btn:hover {
+  background: #bb2d3b;
+}
+
+/* ==========================
+   Empty Data
+========================== */
+
+.empty-data {
+  padding: 30px;
+  text-align: center;
+  color: #777;
+  font-weight: 500;
+}
+
+/* ==========================
+   Scrollbar
+========================== */
+
+.school-table::-webkit-scrollbar {
+  height: 8px;
+}
+
+.school-table::-webkit-scrollbar-thumb {
+  background: #6d63ff;
+  border-radius: 20px;
+}
+
+.school-table::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+/* ==========================
+   Large Tablet
+========================== */
+
+@media (max-width: 992px) {
+
+  .school-page {
+    padding: 18px;
+  }
+
+  .school-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width: 768px) {
+
+  .school-page {
+    padding: 15px;
+  }
+
+  .school-header {
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .create-btn {
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .school-table-ui {
+    min-width: 750px;
+  }
+
+  .save-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .d-flex.gap-2 {
+    flex-direction: column;
+  }
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 576px) {
+
+  .school-page {
+    padding: 12px;
+  }
+
+  .school-header {
+    font-size: 16px;
+  }
+
+  .school-card {
+    border-radius: 10px;
+  }
+
+  .school-card .form-control {
+    font-size: 14px;
+  }
+
+  .search-box input {
+    height: 42px;
+  }
+
+  .school-table-ui {
+    min-width: 650px;
+  }
+
+}
+
+/* ==========================
+   Small Mobile
+========================== */
+
+@media (max-width: 400px) {
+
+  .school-page {
+    padding: 10px;
+  }
+
+  .school-header {
+    font-size: 15px;
+  }
+
+  .create-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+}

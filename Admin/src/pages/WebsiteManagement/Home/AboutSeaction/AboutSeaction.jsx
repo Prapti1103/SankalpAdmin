@@ -101,13 +101,13 @@ function AboutSection() {
                 <Form.Control name="buttonText" value={aboutData.buttonText} onChange={handleChange}/>
               </Col>
 
-              <Col md={6}>
+              {/* <Col md={6}>
                 <Form.Label>Status</Form.Label>
                 <Form.Select name="status" value={aboutData.status} onChange={handleChange}>
                   <option>Active</option>
                   <option>Inactive</option>
                 </Form.Select>
-              </Col>
+              </Col> */}
             </Row>
 
             <div className="about-btn-group">

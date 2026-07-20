@@ -156,22 +156,14 @@ function HeroSection() {
               </Col>
 
               {/* Settings */}
-              <Col md={6}>
+              {/* <Col md={6}>
                 <Form.Group>
                   <Form.Label>Display Order</Form.Label>
                   <Form.Control type="number" min="1" name="displayOrder" value={heroData.displayOrder} onChange={handleChange} />
                 </Form.Group>
-              </Col>
+              </Col> */}
 
-              <Col md={6}>
-                <Form.Group>
-                  <Form.Label>Status</Form.Label>
-                  <Form.Select name="status" value={heroData.status} onChange={handleChange}>
-                    <option>Active</option>
-                    <option>Inactive</option>
-                  </Form.Select>
-                </Form.Group>
-              </Col>
+             
             </Row>
 
             <div className="hero-btn-group">

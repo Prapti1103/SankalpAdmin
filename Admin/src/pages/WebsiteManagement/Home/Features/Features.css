@@ -1,0 +1,183 @@
+.features-page {
+  padding: 25px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.features-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.features-card .card-body {
+  padding: 35px;
+}
+
+/* =========================
+   Page Title
+========================= */
+
+.page-title {
+  margin-bottom: 30px;
+}
+
+.page-title h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.page-title p {
+  color: #64748b;
+  margin: 0;
+}
+
+/* =========================
+   Section Heading
+========================= */
+
+.section-heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-left: 12px;
+  border-left: 5px solid #2563eb;
+}
+
+hr {
+  margin: 35px 0;
+}
+
+/* =========================
+   Labels
+========================= */
+
+.form-label {
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   Inputs
+========================= */
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 12px 14px;
+  transition: 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 .2rem rgba(37,99,235,.15);
+}
+
+/* Textarea */
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+
+
+
+/* =========================
+   Buttons
+========================= */
+
+.features-btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.features-btn-group .btn {
+  min-width: 160px;
+  height: 45px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width:992px){
+
+.features-card .card-body{
+    padding:25px;
+}
+
+.page-title h2{
+    font-size:26px;
+}
+
+.section-heading{
+    font-size:20px;
+}
+
+}
+
+@media (max-width:768px){
+
+.features-page{
+    padding:15px;
+}
+
+.features-card .card-body{
+    padding:20px;
+}
+
+.page-title{
+    text-align:center;
+}
+
+.page-title h2{
+    font-size:23px;
+}
+
+.features-btn-group{
+    flex-direction:column;
+}
+
+.features-btn-group .btn{
+    width:100%;
+}
+
+}
+
+@media (max-width:576px){
+
+.page-title h2{
+    font-size:21px;
+}
+
+.page-title p{
+    font-size:14px;
+}
+
+.section-heading{
+    font-size:18px;
+}
+
+.form-control,
+.form-select{
+    font-size:14px;
+    padding:10px;
+}
+
+textarea.form-control{
+    min-height:100px;
+}
+
+}

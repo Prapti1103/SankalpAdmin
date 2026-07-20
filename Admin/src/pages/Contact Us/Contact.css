@@ -1,0 +1,206 @@
+.contact-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Toolbar */
+
+.contact-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.search-box {
+  position: relative;
+  width: 320px;
+}
+
+.search-box input {
+  padding-left: 40px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  color: #888;
+  z-index: 10;
+}
+
+/* Card */
+
+.contact-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-header {
+  background: linear-gradient(90deg, #6d63ff, #4b7bec);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 20px;
+}
+
+/* Table */
+
+.contact-table {
+  overflow-x: auto;
+}
+
+.contact-table-ui {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.contact-table-ui th {
+  background: #eef2ff;
+  color: #333;
+  font-weight: 600;
+  padding: 14px;
+  text-align: center;
+}
+
+.contact-table-ui td {
+  padding: 14px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.contact-table-ui tbody tr:hover {
+  background: #f9fbff;
+}
+
+/* Action Buttons */
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.view-btn,
+.delete-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-btn {
+  background: #0d6efd;
+}
+
+.view-btn:hover {
+  background: #0b5ed7;
+}
+
+.delete-btn {
+  background: #dc3545;
+}
+
+.delete-btn:hover {
+  background: #bb2d3b;
+}
+
+/* Empty Data */
+
+.empty-data {
+  text-align: center;
+  padding: 30px;
+  font-size: 16px;
+  color: #888;
+}
+
+/* Modal */
+
+.modal-body p {
+  margin-bottom: 12px;
+}
+
+.modal-body strong {
+  color: #333;
+}
+
+.modal-body div {
+  word-break: break-word;
+  line-height: 1.6;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+
+  .contact-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .contact-page {
+    padding: 15px;
+  }
+
+  .contact-header {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .contact-table-ui {
+    min-width: 800px;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .contact-page {
+    padding: 10px;
+  }
+
+  .contact-header {
+    font-size: 15px;
+  }
+
+  .search-box input {
+    height: 42px;
+  }
+
+}
+
+/* Scrollbar */
+
+.contact-table::-webkit-scrollbar {
+  height: 8px;
+}
+
+.contact-table::-webkit-scrollbar-thumb {
+  background: #6d63ff;
+  border-radius: 20px;
+}
+
+.contact-table::-webkit-scrollbar-track {
+  background: #ddd;
+}

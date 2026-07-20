@@ -1,0 +1,198 @@
+/* ======================================
+   Testimonial Page
+====================================== */
+
+.testimonial-page {
+  padding: 20px;
+}
+
+/* ======================================
+   Toolbar
+====================================== */
+
+.testimonial-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.create-btn {
+  background: #0d6efd;
+  border: none;
+  padding: 10px 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.create-btn:hover {
+  background: #0b5ed7;
+}
+
+/* ======================================
+   Card
+====================================== */
+
+.testimonial-card,
+.testimonial-table-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.testimonial-header {
+  background: #0d6efd;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 20px;
+}
+
+/* ======================================
+   Form
+====================================== */
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-control {
+  border-radius: 8px;
+  min-height: 45px;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ======================================
+   Image Preview
+====================================== */
+
+.preview-box {
+  width: 100%;
+  min-height: 280px;
+  border: 2px dashed #4f8dfd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.preview-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.empty-preview {
+  color: #777;
+  font-size: 15px;
+}
+
+/* ======================================
+   Save Button
+====================================== */
+
+.save-btn {
+  background: #0d6efd;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.save-btn:hover {
+  background: #0b5ed7;
+}
+
+/* ======================================
+   Table
+====================================== */
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background: #5b8de3;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
+  border: none;
+}
+
+.table tbody td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+/* ======================================
+   Image
+====================================== */
+
+.testimonial-table-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ======================================
+   Action Buttons
+====================================== */
+
+.table .btn-link {
+  text-decoration: none;
+  padding: 4px 8px;
+}
+
+.table .text-primary {
+  font-size: 18px;
+}
+
+.table .text-danger {
+  font-size: 18px;
+}
+
+/* ======================================
+   Responsive
+====================================== */
+
+@media (max-width: 992px) {
+  .preview-box {
+    margin-bottom: 20px;
+  }
+
+  .testimonial-toolbar {
+    justify-content: center;
+  }
+
+  .create-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-page {
+    padding: 10px;
+  }
+
+  .testimonial-table-image {
+    width: 55px;
+    height: 55px;
+  }
+
+  .preview-image {
+    height: 220px;
+  }
+}

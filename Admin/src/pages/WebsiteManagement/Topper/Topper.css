@@ -1,0 +1,468 @@
+/* ===========================
+   Topper Page
+=========================== */
+
+.topper-page{
+    min-height:100vh;
+    background:#f5f7fb;
+    padding:25px;
+}
+
+/* ===========================
+   Toolbar
+=========================== */
+
+.topper-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.create-btn{
+    background:#0d6efd !important;
+    border:none !important;
+    border-radius:8px !important;
+    padding:12px 22px !important;
+    font-size:15px;
+    font-weight:500;
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+}
+
+.create-btn:hover{
+    background:#0b5ed7 !important;
+}
+
+.topper-color{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:600;
+    color:#333;
+}
+
+.topper-color input{
+    width:45px;
+    height:40px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background:none;
+    padding:0;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.topper-card{
+    border:none;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.topper-header{
+    background:#5b8de3;
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+    padding:18px 25px;
+}
+
+.topper-card .card-body{
+    padding:30px;
+}
+
+/* ===========================
+   Form
+=========================== */
+
+.form-label{
+    font-weight:600;
+    color:#222;
+    margin-bottom:6px;
+}
+
+.form-control{
+    border-radius:8px;
+    border:1px solid #d9d9d9;
+    padding:11px 14px;
+    box-shadow:none !important;
+}
+
+.form-control:focus{
+    border-color:#5b8de3;
+}
+
+/* ===========================
+   Preview
+=========================== */
+
+.preview-box{
+    width:100%;
+    min-height:320px;
+    border:2px dashed #d5d5d5;
+    border-radius:12px;
+    background:#fafafa;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:20px;
+}
+
+.preview-image{
+    width:100%;
+    max-width:240px;
+    height:240px;
+    object-fit:cover;
+    border-radius:12px;
+    border:3px solid #5b8de3;
+}
+
+.empty-preview{
+    color:#888;
+    font-size:15px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.save-btn{
+    background:#198754 !important;
+    border:none !important;
+    border-radius:8px !important;
+    padding:11px 26px !important;
+    font-weight:500;
+}
+
+.save-btn:hover{
+    background:#157347 !important;
+}
+
+
+/* ===========================
+   Topper Table
+=========================== */
+
+.topper-table{
+    width:100%;
+    background:#ffffff;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.topper-table-ui{
+    width:100%;
+    border-collapse:collapse;
+    margin:0;
+}
+
+/* ===========================
+   Table Header
+=========================== */
+
+.topper-table-ui thead{
+    background:#5d8ce6;
+}
+
+.topper-table-ui thead tr{
+    height:60px;
+}
+
+.topper-table-ui th{
+    color:#ffffff;
+    font-size:15px;
+    font-weight:600;
+    text-align:center;
+    border:none;
+    position:relative;
+    letter-spacing:.3px;
+    padding:18px;
+}
+
+/* White Divider */
+
+.topper-table-ui th:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:2px;
+    height:24px;
+    background:rgba(255,255,255,.8);
+}
+
+/* ===========================
+   Action Buttons
+=========================== */
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.edit-btn,
+.delete-btn{
+    width:36px;
+    height:36px;
+    border:none;
+    border-radius:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+    font-size:16px;
+}
+
+.edit-btn{
+    background:#e8f2ff;
+    color:#0d6efd;
+}
+
+.edit-btn:hover{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.delete-btn{
+    background:#ffe9e9;
+    color:#dc3545;
+}
+
+.delete-btn:hover{
+    background:#dc3545;
+    color:#fff;
+}
+
+/* ===========================
+   Table Body
+=========================== */
+
+.topper-table-ui tbody tr{
+    transition:.25s;
+}
+
+.topper-table-ui tbody tr:nth-child(odd){
+    background:#ffffff;
+}
+
+.topper-table-ui tbody tr:nth-child(even){
+    background:#f6f6f6;
+}
+
+.topper-table-ui tbody tr:hover{
+    background:#edf4ff;
+}
+
+.topper-table-ui td{
+    padding:18px;
+    text-align:center;
+    vertical-align:middle;
+    border:none;
+    border-top:1px solid #ececec;
+    color:#222;
+    font-size:15px;
+}
+
+/* ===========================
+   Image
+=========================== */
+
+.table-image{
+    width:55px;
+    height:55px;
+    border-radius:8px;
+    object-fit:cover;
+    border:2px solid #e5e5e5;
+}
+
+.no-image{
+    color:#888;
+    font-weight:500;
+    font-size:14px;
+}
+
+.empty-data{
+    text-align:center;
+    padding:35px;
+    font-size:15px;
+    color:#888;
+}
+/* No Image */
+
+.no-image{
+    color:#888;
+    font-size:14px;
+    font-weight:500;
+}
+
+/* Rounded Corners */
+
+.topper-table-ui thead tr th:first-child{
+    border-top-left-radius:14px;
+}
+
+.topper-table-ui thead tr th:last-child{
+    border-top-right-radius:14px;
+}
+
+/* ====================================
+   Responsive Design
+==================================== */
+
+/* Large Laptop */
+
+@media (max-width:1200px){
+
+    .topper-page{
+        padding:20px;
+    }
+
+    .preview-image{
+        width:220px;
+        height:220px;
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    .topper-toolbar{
+        flex-direction:column;
+        align-items:stretch;
+        gap:15px;
+    }
+
+    .create-btn{
+        width:100%;
+    }
+
+    .topper-color{
+        justify-content:space-between;
+        width:100%;
+    }
+
+    .topper-card .card-body{
+        padding:25px;
+    }
+
+    .preview-box{
+        min-height:280px;
+        margin-bottom:25px;
+    }
+
+    .preview-image{
+        width:210px;
+        height:210px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .topper-page{
+        padding:15px;
+    }
+
+    .topper-header{
+        font-size:20px;
+        text-align:center;
+        padding:15px;
+    }
+
+    .topper-card .card-body{
+        padding:18px;
+    }
+
+    .preview-box{
+        min-height:230px;
+    }
+
+    .preview-image{
+        width:180px;
+        height:180px;
+    }
+
+    .save-btn{
+        width:100%;
+        margin-bottom:10px;
+    }
+
+    .topper-table{
+        overflow-x:auto;
+    }
+
+    .topper-table-ui{
+        min-width:850px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:576px){
+
+    .topper-page{
+        padding:10px;
+    }
+
+    .topper-header{
+        font-size:18px;
+    }
+
+    .preview-box{
+        min-height:200px;
+        padding:15px;
+    }
+
+    .preview-image{
+        width:150px;
+        height:150px;
+    }
+
+    .form-label{
+        font-size:14px;
+    }
+
+    .form-control{
+        font-size:14px;
+        padding:10px;
+    }
+
+    .save-btn{
+        width:100%;
+        font-size:15px;
+    }
+
+    .create-btn{
+        font-size:14px;
+        padding:10px 15px !important;
+    }
+
+    .topper-table-ui th,
+    .topper-table-ui td{
+        font-size:13px;
+        padding:14px;
+        white-space:nowrap;
+    }
+
+    .table-image{
+        width:45px;
+        height:45px;
+    }
+
+}
