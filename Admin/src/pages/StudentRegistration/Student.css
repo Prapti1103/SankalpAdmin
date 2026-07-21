@@ -1,4 +1,12 @@
 /* ====================================
+   Global Fix (box-sizing everywhere)
+==================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+/* ====================================
    Student Page
 ==================================== */
 
@@ -6,6 +14,9 @@
     min-height:100vh;
     background:#f5f7fb;
     padding:25px;
+    overflow-x:hidden;   /* page bahar jaane se rokta hai */
+    width:100%;
+    max-width:100vw;
 }
 
 /* ====================================
@@ -17,6 +28,8 @@
     justify-content:space-between;
     align-items:center;
     margin-bottom:25px;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
 .create-btn{
@@ -39,6 +52,8 @@
     border:none !important;
     border-radius:12px !important;
     overflow:hidden;
+    width:100%;
+    max-width:100%;
 }
 
 .student-header{
@@ -51,6 +66,8 @@
 
 .student-card .card-body{
     padding:30px;
+    max-width:100%;
+    overflow:hidden;
 }
 
 /* ====================================
@@ -102,20 +119,24 @@ textarea.form-control{
 }
 
 /* ====================================
-   Student Table
+   Student Table (SCROLL FIX)
 ==================================== */
 
 .student-table{
     width:100%;
+    max-width:100%;
     background:#ffffff;
     border-radius:14px;
     overflow-x:auto;
+    overflow-y:hidden;
     box-shadow:0 8px 20px rgba(0,0,0,.08);
+    display:block;
+    -webkit-overflow-scrolling:touch;
 }
 
 .student-table-ui{
     width:100%;
-    min-width:1400px;
+    min-width:1100px;   /* pehle 1400px tha, kam kiya */
     border-collapse:collapse;
 }
 
@@ -133,10 +154,10 @@ textarea.form-control{
 
 .student-table-ui th{
     color:#fff;
-    font-size:15px;
+    font-size:14px;
     font-weight:600;
     text-align:center;
-    padding:18px;
+    padding:14px 12px;
     border:none;
     position:relative;
     white-space:nowrap;
@@ -174,12 +195,12 @@ textarea.form-control{
 }
 
 .student-table-ui td{
-    padding:16px;
+    padding:14px 12px;
     text-align:center;
     vertical-align:middle;
     border-top:1px solid #ececec;
     color:#333;
-    font-size:14px;
+    font-size:13px;
     white-space:nowrap;
 }
 
@@ -268,6 +289,10 @@ textarea.form-control{
         padding:25px;
     }
 
+    .student-table-ui{
+        min-width:1000px;
+    }
+
 }
 
 /* Tablet */
@@ -293,7 +318,7 @@ textarea.form-control{
     }
 
     .student-table-ui{
-        min-width:1300px;
+        min-width:900px;
     }
 
 }
@@ -307,13 +332,13 @@ textarea.form-control{
     }
 
     .student-header{
-        font-size:20px;
+        font-size:18px;
         text-align:center;
         padding:15px;
     }
 
     .student-card .card-body{
-        padding:18px;
+        padding:15px;
     }
 
     .form-control,
@@ -332,7 +357,13 @@ textarea.form-control{
     }
 
     .student-table-ui{
-        min-width:1200px;
+        min-width:750px;
+    }
+
+    .student-table-ui th,
+    .student-table-ui td{
+        font-size:12px;
+        padding:10px 8px;
     }
 
 }
@@ -346,7 +377,7 @@ textarea.form-control{
     }
 
     .student-header{
-        font-size:18px;
+        font-size:16px;
     }
 
     .form-label{
@@ -373,17 +404,21 @@ textarea.form-control{
         font-size:14px;
     }
 
+    .student-table-ui{
+        min-width:650px;
+    }
+
     .student-table-ui th,
     .student-table-ui td{
-        font-size:13px;
-        padding:14px;
+        font-size:11px;
+        padding:8px 6px;
     }
 
     .edit-btn,
     .delete-btn{
-        width:34px;
-        height:34px;
-        font-size:14px;
+        width:30px;
+        height:30px;
+        font-size:12px;
     }
 
 }

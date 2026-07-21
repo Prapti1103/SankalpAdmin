@@ -15,7 +15,7 @@ function TestimonialList({
               <th>ID</th>
               <th>Name</th>
               <th>Exam</th>
-              <th>Post</th>
+              <th>rank</th>
               <th>Image</th>
               <th>Description</th>
               <th>Actions</th>
@@ -32,7 +32,7 @@ function TestimonialList({
 
                   <td>{item.exam}</td>
 
-                  <td>{item.post}</td>
+                  <td>{item.rank}</td>
 
                   <td>
                     {item.image ? (

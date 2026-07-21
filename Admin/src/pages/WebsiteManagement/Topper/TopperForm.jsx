@@ -149,7 +149,7 @@ function TopperForm({ topper, onSave, onCancel }) {
 
                 <Col md={6}>
                   <Form.Group className="mb-3">
-                    <Form.Label>Post / Class</Form.Label>
+                    <Form.Label>Class</Form.Label>
 
                     <Form.Control
                       type="text"

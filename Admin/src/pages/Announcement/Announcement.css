@@ -1,0 +1,208 @@
+/* ===========================
+   Announcement Page
+=========================== */
+
+.announcement-page {
+  padding: 20px;
+}
+
+/* ===========================
+   Toolbar
+=========================== */
+
+.announcement-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.create-btn {
+  background: #0d6efd;
+  border: none;
+  font-weight: 600;
+  padding: 10px 18px;
+}
+
+.create-btn:hover {
+  background: #0b5ed7;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.announcement-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.announcement-header {
+  background: #0d6efd;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===========================
+   Table
+=========================== */
+
+.announcement-table {
+  overflow-x: auto;
+}
+
+.announcement-table-ui {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.announcement-table-ui th {
+  background: #f5f7fb;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+}
+
+.announcement-table-ui td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.empty-data {
+  color: #888;
+  font-weight: 500;
+  padding: 30px;
+}
+
+/* ===========================
+   Table Image
+=========================== */
+
+.table-image {
+  width: 70px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* ===========================
+   Action Buttons
+=========================== */
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  color: #fff;
+  margin: 0 4px;
+}
+
+.edit-btn {
+  background: #ffc107;
+}
+
+.edit-btn:hover {
+  background: #e0a800;
+}
+
+.delete-btn {
+  background: #dc3545;
+}
+
+.delete-btn:hover {
+  background: #bb2d3b;
+}
+
+/* ===========================
+   Modal
+=========================== */
+
+.modal-title {
+  font-weight: 600;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.form-control {
+  border-radius: 8px;
+}
+
+/* ===========================
+   Image Preview
+=========================== */
+
+.image-preview {
+  width: 100%;
+  height: 220px;
+  margin-top: 10px;
+  border: 2px dashed #ced4da;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888;
+  overflow: hidden;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===========================
+   Footer Buttons
+=========================== */
+
+.send-btn {
+  background: #198754;
+  border: none;
+  min-width: 120px;
+  font-weight: 600;
+}
+
+.send-btn:hover {
+  background: #157347;
+}
+
+.letter-btn {
+  background: #0d6efd;
+  border: none;
+  min-width: 140px;
+  font-weight: 600;
+}
+
+.letter-btn:hover {
+  background: #0b5ed7;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px){
+
+  .announcement-toolbar{
+    justify-content:center;
+  }
+
+  .announcement-table-ui th,
+  .announcement-table-ui td{
+    font-size:14px;
+    padding:10px;
+  }
+
+  .table-image{
+    width:60px;
+    height:45px;
+  }
+
+}

@@ -1,44 +1,21 @@
 import api from "./api";
 
-/*
-   GET All Hero Sections
- */
-export const getHeroes = async () => {
-  return await api.get("/hero");
-};
+export const getHeroes = () => api.get("/hero");
 
-/*
-   GET Single Hero
-*/
-export const getHeroById = async (id) => {
-  return await api.get(`/hero/${id}`);
-};
+export const getHeroById = (id) => api.get(`/hero/${id}`);
 
-/* 
-   CREATE Hero
- */
-export const createHero = async (formData) => {
-  return await api.post("/hero", formData, {
+export const createHero = (formData) =>
+  api.post("/hero", formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
   });
-};
 
-/*
-   UPDATE Hero
- */
-export const updateHero = async (id, formData) => {
-  return await api.put(`/hero/${id}`, formData, {
+export const updateHero = (id, formData) =>
+  api.put(`/hero/${id}`, formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
   });
-};
 
-/* 
-   DELETE Hero
-*/
-export const deleteHero = async (id) => {
-  return await api.delete(`/hero/${id}`);
-};
+export const deleteHero = (id) => api.delete(`/hero/${id}`);

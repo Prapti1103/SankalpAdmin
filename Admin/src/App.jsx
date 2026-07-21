@@ -23,6 +23,13 @@ import Testimonial from "./pages/WebsiteManagement/Testimonial/Testimonial";
 import Topper from "./pages/WebsiteManagement/Topper/Topper";
 import Award from "./pages/WebsiteManagement/Award/Award";
 import Student from "./pages/StudentRegistration/Student";
+import District from "./pages/District/District";
+import Taluka from "./pages/Taluka/Taluka";
+import ExamCentre from "./pages/ExamCenter/ExamCentre";
+import CentreCoordinator from "./pages/CentreCoordinator/CentreCoordinator";
+
+
+
 
 // Website Pages
 
@@ -94,7 +101,28 @@ function App() {
           <Route path="/students" element={<Dashboard />} />
 
         {/* ===================== Coordinator=============== */}
-          <Route path="/coordinator" element={<Dashboard />} />
+          <Route path="/district" element={<Dashboard />}>
+
+    <Route index element={<District/>} />
+
+    <Route
+        path=":districtId/taluka"
+        element={<Taluka/>}
+    />
+
+    <Route
+        path=":districtId/taluka/:talukaId/exam-centre"
+        element={<ExamCentre/>}
+    />
+
+    <Route
+        path=":districtId/taluka/:talukaId/exam-centre/:examCentreId/coordinator"
+        element={<CentreCoordinator/>}
+    />
+
+</Route>
+
+      <Route path="/announcement" element={<Dashboard />} />
 
           {/* ===============Contact ================ */}
           <Route path="/contact" element={<Dashboard />} />

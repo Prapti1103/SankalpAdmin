@@ -21,7 +21,7 @@ const SchoolList = ({ schools, onAdd, onEdit, onDelete }) => {
 
       <div className="school-toolbar">
         <Button className="create-btn" onClick={onAdd}>
-          <FaPlus className="me-2" />
+          <FaPlus className="me-2 text-light" />
           Add School
         </Button>
 
@@ -40,7 +40,7 @@ const SchoolList = ({ schools, onAdd, onEdit, onDelete }) => {
       {/* Table */}
 
       <Card className="school-card">
-        <Card.Header className="school-header">
+        <Card.Header className="school-header text-light">
           School List
         </Card.Header>
 

@@ -1,0 +1,302 @@
+/* ==========================
+   District Page
+========================== */
+
+.district-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: #f5f7fb;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ==========================
+   Toolbar
+========================== */
+
+.district-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.create-btn {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.create-btn:hover {
+  background: linear-gradient(135deg, #4338ca, #1d4ed8);
+}
+
+/* ==========================
+   Card
+========================== */
+
+.district-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0,0,0,.08);
+}
+
+.district-header {
+  background: linear-gradient(90deg,#6d63ff,#4b7bec);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 20px;
+}
+
+/* ==========================
+   Table
+========================== */
+
+.district-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.district-table-ui {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+}
+
+.district-table-ui thead {
+  background: #eef2ff;
+}
+
+.district-table-ui th {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.district-table-ui td {
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #ececec;
+  vertical-align: middle;
+}
+
+.district-table-ui tbody tr:hover {
+  background: #f8f9ff;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.delete-btn {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #dc3545;
+  color: white;
+  transition: .3s;
+}
+
+.delete-btn:hover {
+  background: #bb2d3b;
+}
+
+.taluka-btn {
+  background: #198754;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.taluka-btn:hover {
+  background: #157347;
+}
+
+/* ==========================
+   Empty
+========================== */
+
+.empty-data {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-weight: 500;
+}
+
+/* ==========================
+   Modal
+========================== */
+
+.modal-content {
+  border-radius: 15px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body .form-control {
+  height: 45px;
+  border-radius: 10px;
+}
+
+.modal-footer .btn {
+  min-width: 100px;
+  border-radius: 8px;
+}
+
+/* ==========================
+   Scrollbar
+========================== */
+
+.district-table::-webkit-scrollbar {
+  height: 8px;
+}
+
+.district-table::-webkit-scrollbar-thumb {
+  background: #6d63ff;
+  border-radius: 20px;
+}
+
+.district-table::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+/* ==========================
+   Laptop
+========================== */
+
+@media(max-width:1200px){
+
+    .district-page{
+        padding:18px;
+    }
+
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media(max-width:992px){
+
+    .district-toolbar{
+        justify-content:center;
+    }
+
+    .create-btn{
+        width:100%;
+        max-width:350px;
+    }
+
+}
+
+/* ==========================
+   Mobile Tablet
+========================== */
+
+@media(max-width:768px){
+
+    .district-page{
+        padding:15px;
+    }
+
+    .district-header{
+        text-align:center;
+        font-size:17px;
+    }
+
+    .district-table-ui{
+        min-width:650px;
+    }
+
+    .action-buttons{
+        flex-direction:column;
+    }
+
+    .taluka-btn{
+        width:100%;
+    }
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:576px){
+
+    .district-page{
+        padding:12px;
+    }
+
+    .district-header{
+        font-size:16px;
+    }
+
+    .create-btn{
+        width:100%;
+    }
+
+    .modal-dialog{
+        margin:15px;
+    }
+
+    .modal-footer{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .modal-footer .btn{
+        width:100%;
+    }
+
+}
+
+/* ==========================
+   Small Mobile
+========================== */
+
+@media(max-width:400px){
+
+    .district-page{
+        padding:10px;
+    }
+
+    .district-header{
+        font-size:15px;
+    }
+
+    .district-table-ui{
+        min-width:600px;
+    }
+
+    .create-btn{
+        font-size:14px;
+    }
+
+}

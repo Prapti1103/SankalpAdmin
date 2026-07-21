@@ -1,34 +1,44 @@
 import api from "./api";
 
-// Get All Awards
-export const getAwards = () => {
-  return api.get("/award");
+/*
+ * GET All Awards
+ */
+export const getAwards = async () => {
+  return await api.get("/award");
 };
 
-// Get Award By ID
-export const getAwardById = (id) => {
-  return api.get(`/award/${id}`);
+/*
+ * GET Single Award
+ */
+export const getAwardById = async (id) => {
+  return await api.get(`/award/${id}`);
 };
 
-// Create Award
-export const createAward = (formData) => {
-  return api.post("/award", formData, {
+/*
+ * CREATE Award
+ */
+export const createAward = async (formData) => {
+  return await api.post("/award", formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
   });
 };
 
-// Update Award
-export const updateAward = (id, formData) => {
-  return api.put(`/award/${id}`, formData, {
+/*
+ * UPDATE Award
+ */
+export const updateAward = async (id, formData) => {
+  return await api.put(`/award/${id}`, formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
   });
 };
 
-// Delete Award
-export const deleteAward = (id) => {
-  return api.delete(`/award/${id}`);
+/*
+ * DELETE Award
+ */
+export const deleteAward = async (id) => {
+  return await api.delete(`/award/${id}`);
 };

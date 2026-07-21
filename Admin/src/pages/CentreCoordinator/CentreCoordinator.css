@@ -1,0 +1,345 @@
+/* ==========================
+   Coordinator Page
+========================== */
+
+.coordinator-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: #f5f7fb;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+
+
+
+/* Submit Button Section */
+
+.submit-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  background: #0d6efd;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 35px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background: #b5b5b5;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ==========================
+   Page Title
+========================== */
+
+.page-title {
+  margin-bottom: 20px;
+}
+
+.page-title h4,
+.page-title h5,
+.page-title h6 {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.page-title h5,
+.page-title h6 {
+  margin-top: 8px;
+  color: #666;
+}
+
+.page-title h6 {
+  font-size: 17px;
+}
+
+/* ==========================
+   Toolbar
+========================== */
+
+.coordinator-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.create-btn {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.create-btn:hover {
+  background: linear-gradient(135deg, #4338ca, #1d4ed8);
+}
+
+/* ==========================
+   Card
+========================== */
+
+.coordinator-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0,0,0,.08);
+}
+
+.coordinator-header {
+  background: linear-gradient(90deg,#6d63ff,#4b7bec);
+  color: #fff;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ==========================
+   Table
+========================== */
+
+.coordinator-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.coordinator-table-ui {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.coordinator-table-ui thead {
+  background: #eef2ff;
+}
+
+.coordinator-table-ui th {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.coordinator-table-ui td {
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #ececec;
+}
+
+.coordinator-table-ui tbody tr:hover {
+  background: #f8f9ff;
+}
+
+/* ==========================
+   Delete Button
+========================== */
+
+.delete-btn {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #dc3545;
+  color: white;
+  transition: .3s;
+}
+
+.delete-btn:hover {
+  background: #bb2d3b;
+}
+
+/* ==========================
+   Empty Data
+========================== */
+
+.empty-data {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+}
+
+/* ==========================
+   Modal
+========================== */
+
+.modal-content {
+  border-radius: 15px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body .form-control {
+  height: 45px;
+  border-radius: 10px;
+}
+
+.modal-footer .btn {
+  min-width: 100px;
+  border-radius: 8px;
+}
+
+/* ==========================
+   Scrollbar
+========================== */
+
+.coordinator-table::-webkit-scrollbar {
+  height: 8px;
+}
+
+.coordinator-table::-webkit-scrollbar-thumb {
+  background: #6d63ff;
+  border-radius: 20px;
+}
+
+.coordinator-table::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+/* ==========================
+   Laptop
+========================== */
+
+@media (max-width:1200px){
+
+  .coordinator-page{
+    padding:18px;
+  }
+
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width:992px){
+
+  .coordinator-toolbar{
+    justify-content:center;
+  }
+
+  .create-btn{
+    width:100%;
+    max-width:350px;
+  }
+
+}
+
+/* ==========================
+   Mobile Tablet
+========================== */
+
+@media (max-width:768px){
+
+  .coordinator-page{
+    padding:15px;
+  }
+
+  .page-title{
+    text-align:center;
+  }
+
+  .page-title h4{
+    font-size:20px;
+  }
+
+  .page-title h5{
+    font-size:17px;
+  }
+
+  .page-title h6{
+    font-size:16px;
+  }
+
+  .coordinator-header{
+    text-align:center;
+  }
+
+  .coordinator-table-ui{
+    min-width:850px;
+  }
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:576px){
+
+  .coordinator-page{
+    padding:12px;
+  }
+
+  .create-btn{
+    width:100%;
+  }
+
+  .modal-dialog{
+    margin:15px;
+  }
+
+  .modal-footer{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .modal-footer .btn{
+    width:100%;
+  }
+
+}
+
+/* ==========================
+   Small Mobile
+========================== */
+
+@media (max-width:400px){
+
+  .coordinator-page{
+    padding:10px;
+  }
+
+  .page-title h4{
+    font-size:18px;
+  }
+
+  .page-title h5{
+    font-size:16px;
+  }
+
+  .page-title h6{
+    font-size:15px;
+  }
+
+  .coordinator-table-ui{
+    min-width:800px;
+  }
+
+}

@@ -6,7 +6,7 @@ function TestimonialForm({ testimonial, onSave, onCancel }) {
   const [formData, setFormData] = useState({
     name: "",
     exam: "",
-    post: "",
+    rank: "",
     description: "",
     image: null,
   });
@@ -20,7 +20,7 @@ function TestimonialForm({ testimonial, onSave, onCancel }) {
       setFormData({
         name: testimonial.name || "",
         exam: testimonial.exam || "",
-        post: testimonial.post || "",
+        rank: testimonial.rank || "",
         description: testimonial.description || "",
         image: testimonial.image || null,
       });
@@ -163,13 +163,13 @@ function TestimonialForm({ testimonial, onSave, onCancel }) {
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Label>Post</Form.Label>
+                <Form.Label>Rank</Form.Label>
 
                 <Form.Control
                   type="text"
-                  name="post"
-                  placeholder="Enter Post"
-                  value={formData.post}
+                  name="rank"
+                  placeholder="Enter Rank"
+                  value={formData.rank}
                   onChange={handleChange}
                 />
               </Form.Group>

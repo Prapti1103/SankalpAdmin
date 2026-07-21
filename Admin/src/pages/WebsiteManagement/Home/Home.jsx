@@ -27,8 +27,8 @@ function Home() {
       route: "/website-management/home/services",
     },
     {
-      title: "Guide",
-      description: "Manage guide section",
+      title: "Sankalp Features",
+      description: "Manage Sankalp Features section",
       icon: <BsBook />,
       route: "/website-management/home/guide",
     },

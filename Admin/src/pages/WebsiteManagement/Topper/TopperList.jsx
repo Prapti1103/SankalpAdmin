@@ -10,7 +10,7 @@ function TopperList({ toppers, onEdit, onDelete }) {
             <th>ID</th>
             <th>Name</th>
             <th>Total Marks</th>
-            <th>Post</th>
+            <th>Class</th>
             <th>Rank</th>
             <th>Year</th>
             <th>Image</th>

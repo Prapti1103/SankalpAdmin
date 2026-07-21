@@ -35,9 +35,14 @@ import Testimonial from "../WebsiteManagement/Testimonial/Testimonial";
 import Topper from "../WebsiteManagement/Topper/Topper";
 import Award from "../WebsiteManagement/Award/Award";
 import Student from "../StudentRegistration/Student";
-import Coordinator from "../Coordinator/Coordinator";
+// import Coordinator from "../Coordinator/Coordinator";
 import Contact from "../Contact Us/Contact";
 import School from "../School/School";
+import District from "../District/District";
+import Taluka from "../Taluka/Taluka";
+import ExamCentre from "../ExamCenter/ExamCentre";
+import CentreCoordinator from "../CentreCoordinator/CentreCoordinator";
+import Announcement from "../Announcement/Announcement";
 
 function Dashboard() {
   const [showWebsiteMenu, setShowWebsiteMenu] = useState(false);
@@ -59,7 +64,7 @@ function Dashboard() {
           <BsPersonCircle className="admin-icon" />
           <div className="admin-details">
             <h3>Admin</h3>
-            <p>Administrator</p>
+           
           </div>
         </div>
 
@@ -105,7 +110,7 @@ function Dashboard() {
 
           {/* Coordinator */}
           <li>
-            <NavLink to="/coordinator" onClick={() => setShowWebsiteMenu(false)} className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}>
+            <NavLink to="/district" onClick={() => setShowWebsiteMenu(false)} className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}>
               <div className="menu-left">
                 <BsBuilding />
                 <span>Destrict</span>
@@ -138,7 +143,7 @@ function Dashboard() {
             <NavLink to="/test-series" onClick={() => setShowWebsiteMenu(false)} className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}>
               <div className="menu-left">
                 <BsClipboardCheck />
-                <span>Test Series</span>
+                <span>Sankalp Exam</span>
               </div>
             </NavLink>
           </li>
@@ -199,25 +204,25 @@ function Dashboard() {
                 <span className="text-label">Home</span>
               </NavLink>
 
-              <NavLink to="/website-management/answer-key" className={({ isActive }) => (isActive ? "sub-menu-item active" : "sub-menu-item")}>
+              {/* <NavLink to="/website-management/answer-key" className={({ isActive }) => (isActive ? "sub-menu-item active" : "sub-menu-item")}>
                 <BsFileEarmarkText />
                 <span className="text-label">Answer Key</span>
-              </NavLink>
+              </NavLink> */}
 
-              <NavLink to="/website-management/exam" className={({ isActive }) => (isActive ? "sub-menu-item active" : "sub-menu-item")}>
+              {/* <NavLink to="/website-management/exam" className={({ isActive }) => (isActive ? "sub-menu-item active" : "sub-menu-item")}>
                 <BsBook />
                 <span className="text-label">Exam</span>
-              </NavLink>
+              </NavLink> */}
 
               <NavLink to="/website-management/gallery" className={({ isActive }) => (isActive ? "sub-menu-item active" : "sub-menu-item")}>
                 <BsImages />
                 <span className="text-label">Gallery</span>
               </NavLink>
 
-              <NavLink to="/website-management/download" className={({ isActive }) => (isActive ? "sub-menu-item active" : "sub-menu-item")}>
+              {/* <NavLink to="/website-management/download" className={({ isActive }) => (isActive ? "sub-menu-item active" : "sub-menu-item")}>
                 <BsDownload />
                 <span className="text-label">Download</span>
-              </NavLink>
+              </NavLink> */}
 
               <NavLink to="/website-management/award" className={({ isActive }) => (isActive ? "sub-menu-item active" : "sub-menu-item")}>
                 <BsAward />
@@ -281,13 +286,35 @@ function Dashboard() {
             {location.pathname === "/students" && <Student/>}
 
             {/* Coordinator Seaction */}
-            {location.pathname === "/coordinator" && <Coordinator/>}
+            {location.pathname === "/district" && <District/>}
+
+              {/* Taluka */}
+{location.pathname.startsWith("/district/") &&
+ location.pathname.includes("/taluka") &&
+ !location.pathname.includes("/exam-centre") && (
+  <Taluka/>
+)}
+
+{/* Exam Centre */}
+{location.pathname.includes("/exam-centre") &&
+ !location.pathname.includes("/coordinator") && (
+  <ExamCentre/>
+)}
+
+{/* Centre Coordinator */}
+{location.pathname.includes("/coordinator") && (
+  <CentreCoordinator/>
+)}
+
             
             {/* Contact Seaction */}
             {location.pathname === "/contact" && <Contact/>}
 
             {/* School Seaction */}
             {location.pathname === "/school" && <School/>}
+
+
+            {location.pathname === "/announcement" && <Announcement/>}
 
           </div>
 
