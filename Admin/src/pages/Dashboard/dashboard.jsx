@@ -43,6 +43,8 @@ import Taluka from "../Taluka/Taluka";
 import ExamCentre from "../ExamCenter/ExamCentre";
 import CentreCoordinator from "../CentreCoordinator/CentreCoordinator";
 import Announcement from "../Announcement/Announcement";
+import Course from "../WebsiteManagement/Course/Course";
+import Gallery from "../WebsiteManagement/Gallery/Gallery";
 
 function Dashboard() {
   const [showWebsiteMenu, setShowWebsiteMenu] = useState(false);
@@ -315,6 +317,12 @@ function Dashboard() {
 
 
             {location.pathname === "/announcement" && <Announcement/>}
+
+
+            {location.pathname === "/website-management/courses" && <Course/>}
+
+
+            {location.pathname === "/website-management/gallery" && <Gallery/>}
 
           </div>
 

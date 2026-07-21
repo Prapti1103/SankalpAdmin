@@ -90,6 +90,11 @@ function App() {
 
           <Route path="download" element={<div>Download</div>} />
 
+          <Route path="courses" element={<div>Courses</div>} />
+
+
+          <Route path="gallery" element={<div>gallery</div>} />
+
         </Route>
 
 
