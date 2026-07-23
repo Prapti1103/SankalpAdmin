@@ -12,11 +12,14 @@ import Settings from "./pages/Settings/Settings";
 // Home
 import Home from "./pages/WebsiteManagement/Home/Home";
 
+
+import SankalpExam from "./pages/SankalpExam/SankalpExam";
+
 // Home Sections
 import HeroSection from "./pages/WebsiteManagement/Home/HeroSeaction/HeroSection";
 import Guide from "./pages/WebsiteManagement/Home/Guide/Guide";
 import AboutSection from "./pages/WebsiteManagement/Home/AboutSeaction/AboutSeaction";
-import Features from "./pages/WebsiteManagement/Home/Features/Features";
+// import Features from "./pages/WebsiteManagement/Home/Features/Features";
 import Footer from "./pages/WebsiteManagement/Home/Footer/Footer";
 import Faculty from "./pages/WebsiteManagement/Faculty/Faculty";
 import Testimonial from "./pages/WebsiteManagement/Testimonial/Testimonial";
@@ -27,6 +30,8 @@ import District from "./pages/District/District";
 import Taluka from "./pages/Taluka/Taluka";
 import ExamCentre from "./pages/ExamCenter/ExamCentre";
 import CentreCoordinator from "./pages/CentreCoordinator/CentreCoordinator";
+import Service from "./pages/WebsiteManagement/Home/Service/Service";
+import CTA from "./pages/WebsiteManagement/Home/CTA/CTA";
 
 
 
@@ -56,13 +61,13 @@ function App() {
 
             <Route path="hero" element={<HeroSection />} />
 
-            {/* <Route path="services" element={<Services />} /> */}
+            <Route path="services" element={<Service/>} />
 
             <Route path="guide" element={<Guide />} />
 
             <Route path="about" element={<AboutSection />} />
 
-            <Route path="features-contact" element={<Features />} />
+            <Route path="cta" element={<CTA/>} />
 
             <Route path="footer" element={<Footer />} />
 
@@ -134,6 +139,9 @@ function App() {
 
           {/* ============= School =========== */}
           <Route path="/school" element={<Dashboard />} />
+
+
+          <Route path="/sankalp-exam" element={<Dashboard />} />
 
 
 

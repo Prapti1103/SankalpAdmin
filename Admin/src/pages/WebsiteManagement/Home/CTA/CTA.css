@@ -1,0 +1,321 @@
+/* =========================================================
+   CTA PAGE
+========================================================= */
+
+.cta-page {
+    padding: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.cta-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.create-btn {
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 18px;
+}
+
+.create-btn:hover {
+    background: #1d4ed8;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.cta-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.cta-header {
+    background: #5b8be3;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.table {
+    width: 100%;
+    min-width: 1200px;
+    margin-bottom: 0;
+    border-collapse: collapse;
+}
+
+.table thead th {
+
+    background: #5b8be3;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 12px;
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+}
+
+.table tbody td {
+
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+    word-break: break-word;
+
+}
+
+.table td:nth-child(2) {
+    min-width: 180px;
+}
+
+.table td:nth-child(3) {
+    min-width: 280px;
+}
+
+.table td:nth-child(4) {
+    min-width: 220px;
+}
+
+.table td:nth-child(5) {
+    min-width: 150px;
+}
+
+.table td:nth-child(6),
+.table td:nth-child(7) {
+    min-width: 130px;
+}
+
+.table td:nth-child(8),
+.table td:nth-child(9) {
+    min-width: 250px;
+}
+
+.table td:last-child {
+    min-width: 120px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.edit-btn,
+.delete-btn {
+
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin: 0 4px;
+    transition: .3s;
+
+}
+
+.edit-btn {
+    background: #198754;
+}
+
+.edit-btn:hover {
+    background: #157347;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.delete-btn:hover {
+    background: #bb2d3b;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-dialog {
+
+    max-width: 1000px;
+
+}
+
+.modal-content {
+    border-radius: 12px;
+}
+
+.modal-header {
+
+    background: #5b8be3;
+    color: white;
+
+}
+
+.modal-title {
+
+    font-weight: 600;
+
+}
+
+.modal-footer {
+
+    border-top: 1px solid #eee;
+
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-label {
+
+    font-weight: 600;
+
+}
+
+.form-control {
+
+    border-radius: 8px;
+
+}
+
+textarea.form-control {
+
+    resize: vertical;
+
+}
+
+.save-btn {
+
+    background: #2563eb;
+    border: none;
+    padding: 10px 24px;
+    font-weight: 600;
+
+}
+
+.save-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:991px){
+
+    .cta-page{
+
+        padding:15px;
+
+    }
+
+    .table{
+
+        min-width:1100px;
+
+    }
+
+    .modal-dialog{
+
+        max-width:95%;
+
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:768px){
+
+    .cta-page{
+
+        padding:10px;
+
+    }
+
+    .cta-toolbar{
+
+        justify-content:center;
+
+    }
+
+    .create-btn{
+
+        width:100%;
+
+    }
+
+    .table{
+
+        min-width:1000px;
+
+    }
+
+    .modal-dialog{
+
+        margin:10px;
+        max-width:100%;
+
+    }
+
+    .modal-footer{
+
+        flex-direction:column;
+
+    }
+
+    .modal-footer .btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width:480px){
+
+    .table{
+
+        min-width:900px;
+
+    }
+
+    .cta-header{
+
+        font-size:16px;
+
+    }
+
+}

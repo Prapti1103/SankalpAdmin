@@ -42,7 +42,7 @@ function Home() {
       title: "Features",
       description: "Manage features & contact",
       icon: <BsTelephone />,
-      route: "/website-management/home/features-contact",
+      route: "/website-management/home/cta",
     },
     {
       title: "Footer",

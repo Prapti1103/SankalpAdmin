@@ -28,7 +28,7 @@ import {
 import "./Dashboard.css";
 import AboutSection from "../WebsiteManagement/Home/AboutSeaction/AboutSeaction";
 import Footer from "../WebsiteManagement/Home/Footer/Footer";
-import Features from "../WebsiteManagement/Home/Features/Features";
+// import Features from "../WebsiteManagement/Home/Features/Features";
 import Guide from "../WebsiteManagement/Home/Guide/Guide";
 import Faculty from "../WebsiteManagement/Faculty/Faculty";
 import Testimonial from "../WebsiteManagement/Testimonial/Testimonial";
@@ -45,6 +45,9 @@ import CentreCoordinator from "../CentreCoordinator/CentreCoordinator";
 import Announcement from "../Announcement/Announcement";
 import Course from "../WebsiteManagement/Course/Course";
 import Gallery from "../WebsiteManagement/Gallery/Gallery";
+import SankalpExam from "../SankalpExam/SankalpExam";
+import Service from "../WebsiteManagement/Home/Service/Service";
+import CTA from "../WebsiteManagement/Home/CTA/CTA";
 
 function Dashboard() {
   const [showWebsiteMenu, setShowWebsiteMenu] = useState(false);
@@ -142,7 +145,7 @@ function Dashboard() {
 
           {/* Test Series */}
           <li>
-            <NavLink to="/test-series" onClick={() => setShowWebsiteMenu(false)} className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}>
+            <NavLink to="/sankalp-exam" onClick={() => setShowWebsiteMenu(false)} className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}>
               <div className="menu-left">
                 <BsClipboardCheck />
                 <span>Sankalp Exam</span>
@@ -268,8 +271,9 @@ function Dashboard() {
             {location.pathname === "/website-management/home" && <Home />}
             {location.pathname === "/website-management/home/hero" && <HeroSection />}
             {location.pathname === "/website-management/home/guide" && <Guide />}
+            {location.pathname === "/website-management/home/services" && <Service/>}
             {location.pathname === "/website-management/home/about" && <AboutSection />}
-            {location.pathname === "/website-management/home/features-contact" && <Features />}
+            {location.pathname === "/website-management/home/cta" && <CTA/>}
             {location.pathname === "/website-management/home/footer" && <Footer />}
 
             {/* faculty seaction */}
@@ -323,6 +327,11 @@ function Dashboard() {
 
 
             {location.pathname === "/website-management/gallery" && <Gallery/>}
+
+
+            {location.pathname === "/sankalp-exam" && <SankalpExam/>}
+
+
 
           </div>
 
