@@ -165,7 +165,7 @@ function Dashboard() {
 
           {/* Logout */}
           <li>
-            <NavLink to="/logout" onClick={() => setShowWebsiteMenu(false)} className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}>
+            <NavLink to="/" onClick={() => setShowWebsiteMenu(false)} className={({ isActive }) => (isActive ? "menu-item active" : "menu-item")}>
               <div className="menu-left">
                 <BsBoxArrowRight />
                 <span>Logout</span>
